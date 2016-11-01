@@ -1,0 +1,433 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>VCA </title>
+
+    <!-- Bootstrap core CSS -->
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="fonts/css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+
+    <!-- Custom styling plus plugins -->
+    <link href="css/custom.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="http://kendo.cdn.telerik.com/2016.3.914/styles/kendo.default.min.css" />
+    <link rel="stylesheet" href="http://kendo.cdn.telerik.com/2016.3.914/styles/kendo.default.mobile.min.css" />
+
+    <script src="http://kendo.cdn.telerik.com/2016.3.914/js/jquery.min.js"></script>
+    <script src="http://kendo.cdn.telerik.com/2016.3.914/js/angular.min.js"></script>
+    <script src="http://kendo.cdn.telerik.com/2016.3.914/js/kendo.all.min.js"></script>
+   <!-- <script src="http://kendo.cdn.telerik.com/2016.3.914/js/kendo.timezones.min.js"></script> -->
+    <script src="js/MyCtrl.js"></script>
+	<script src="http://momentjs.com/downloads/moment.min.js"></script>
+    <!--[if lt IE 9]>
+        <script src="../assets/js/ie8-responsive-file-warning.js"></script>
+        <![endif]-->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+</head>
+
+
+<body class="nav-md" ng-app="KendoDemos" ng-cloak>
+		
+    <div class="container body">
+
+        <div class="main_container">
+            <div class="left_col">
+                <div class="left_col scroll-view">
+
+                    <br />
+                    <!-- sidebar menu -->
+                    <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+                        <div class="menu_section">
+                            <h3>Menu</h3>
+                            <ul class="nav side-menu">
+                                <li>
+                                    <a href="index.html"><i class="fa fa-home"></i> <span>Home</span> </a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-search"></i> <span>Search client</span> </a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-user-plus"></i> <span>Add client</span> </a>
+                                </li>
+                                <li class="active">
+                                    <a><i class="fa fa-calendar"></i> <span>Calender</span> <span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu" style="display: none">
+                                        <li>
+                                            <a href="#"><i class="fa fa-flag-o"></i>Arrivals</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="fa fa-external-link-square"></i>Departures</a>
+                                        </li>
+                                        <li>
+                                            <a href="scheduler.html"><i class="fa fa-calendar-plus-o"></i>Scheduler</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a href="#"><i class="fa fa-edit"></i> <span>Prescriptions</span> </a></li>
+                                <li><a href="#"><i class="fa fa-cogs"></i> <span>Setting</span> </a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- /sidebar menu -->
+
+                </div>
+            </div>
+            <!-- top navigation -->
+            <div class="top_nav">
+                <div class="nav_menu">
+                    <nav class="" role="navigation">
+                        <div class="nav toggle">
+                            <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+                        </div>
+                        <ul class="nav navbar-nav navbar-right hidden">
+                            <li class="">
+                                <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                    <img src="images/img.jpg" alt="">John Doe
+                                    <span class=" fa fa-angle-down"></span>
+                                </a>
+                                <ul class="dropdown-menu dropdown-usermenu animated fadeInDown pull-right">
+                                    <li>
+                                        <a href="javascript:;">  Profile</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <span class="badge bg-red pull-right">50%</span>
+                                            <span>Settings</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">Help</a>
+                                    </li>
+                                    <li>
+                                        <a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li role="presentation" class="dropdown">
+                                <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
+                                    <i class="fa fa-envelope-o"></i>
+                                    <span class="badge bg-green">6</span>
+                                </a>
+                                <ul id="menu1" class="dropdown-menu list-unstyled msg_list animated fadeInDown" role="menu">
+                                    <li>
+                                        <a>
+                                            <span class="image">
+                                                <img src="images/img.jpg" alt="Profile Image" />
+                                            </span>
+                                            <span>
+                                                <span>John Smith</span>
+                                                <span class="time">3 mins ago</span>
+                                            </span>
+                                            <span class="message">
+                                                Film festivals used to be do-or-die moments for movie makers. They were where...
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a>
+                                            <span class="image">
+                                                <img src="images/img.jpg" alt="Profile Image" />
+                                            </span>
+                                            <span>
+                                                <span>John Smith</span>
+                                                <span class="time">3 mins ago</span>
+                                            </span>
+                                            <span class="message">
+                                                Film festivals used to be do-or-die moments for movie makers. They were where...
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a>
+                                            <span class="image">
+                                                <img src="images/img.jpg" alt="Profile Image" />
+                                            </span>
+                                            <span>
+                                                <span>John Smith</span>
+                                                <span class="time">3 mins ago</span>
+                                            </span>
+                                            <span class="message">
+                                                Film festivals used to be do-or-die moments for movie makers. They were where...
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a>
+                                            <span class="image">
+                                                <img src="images/img.jpg" alt="Profile Image" />
+                                            </span>
+                                            <span>
+                                                <span>John Smith</span>
+                                                <span class="time">3 mins ago</span>
+                                            </span>
+                                            <span class="message">
+                                                Film festivals used to be do-or-die moments for movie makers. They were where...
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <div class="text-center">
+                                            <a>
+                                                <strong>See All Alerts</strong>
+                                                <i class="fa fa-angle-right"></i>
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <button class="btn btn-default shortCutsTab"><i class="fa fa-th"></i></button>
+                           <div class="shortCuts">
+                                <a href="index.html"><i class="fa fa-home"></i></a>
+                                <a href="scheduler.html"><i class="fa fa-calendar-plus-o"></i></a>
+                                <a href="#"><i class="fa fa-user-plus"></i></a>
+                                <a href="#"><i class="fa fa-flag-o"></i></a>
+                                <a href="#"><i class="fa fa-cogs"></i></a>
+                            </div>
+                    </nav>
+                </div>
+            </div>
+            <!-- /top navigation -->
+            <!-- page content -->
+            <div class="right_col" role="main">
+                <div class="">
+                    <div class="page-title">
+                        <div class="title_left">
+                            <h3>Scheduler</h3>
+                        </div>
+                        <div class="title_right hidden">
+                            <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Search for...">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default" type="button">Go!</button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="row" ng-controller="MyCtrl" ng-init="init();">
+                        <div class="col-md-3 col-sm-4 col-xs-12">
+                            <div id="filter">
+                                <div class=" k-content">
+                                    <div>
+                                        <div kendo-tab-strip k-content-urls="[ null, null, null]">
+                                            <!-- tab list -->
+                                            <ul>
+                                                <li class="k-state-active">Medical</li>
+                                                <li>Grooming</li>
+                                                <li>Boarding</li>
+                                            </ul>
+
+                                            <div style="padding: 1em">
+                                                <select id="size" class="form-control" ng-model="selectedDept" ng-change="selectDoctors()">
+												<option value="-1">All Departments/Resources</option>
+											   <option ng-repeat="option in departments" value="{{option.ProviderTypeId}}">{{option.ProviderType1}}</option>
+											   </select>
+                                                <button class="btn btn-default" ng-click="setDefult()">Set selected as default</button>
+												<p>Current default: {{ defaultDept }}</p> 
+
+                                                <div class=" k-content">
+                                                    <select kendo-multi-select k-options="selectOptions" k-ng-model="selectedIds" k-rebind="selectOptions"></select>
+                                                </div>
+                                                <div class=" k-content">
+                                                    <kendo-calendar ng-model="selectedDate"
+                                                                    data-k-format="'yyyy/MM/dd'" k-options="selectedDateOption"></kendo-calendar>
+                                                </div>
+                                            </div>
+
+                                            <div style="padding: 1em">
+                                                Grooming
+                                            </div>
+                                            <div style="padding: 1em">
+                                                Boarding
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-9 col-sm-8 col-xs-12">
+                            <div> <div kendo-scheduler k-options="schedulerOptions" k-rebind="schedulerOptions" id="shedulerGrid">
+                                <span k-event-template class='custom-event'>{{dataItem.title}}</span>
+                                <div k-all-day-event-template class='custom-all-day-event'>{{dataItem.title}}</div>
+                            </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- /page content -->
+        </div>
+    </div>
+
+	
+	<script id="toolTipTemplate" type="text/x-kendo-template">
+      #var uid = target.parent().attr("data-uid");#
+      #var scheduler = target.closest("[data-role=scheduler]").data("kendoScheduler");#
+      #var model = scheduler.occurrenceByUid(uid);#
+
+      #if(model) {#
+          <strong>Appt:</strong> #=kendo.format('{0:h:mm tt (MM/d/yyyy)}',model.start)#<br />
+		  #if(model.dropoffStartTime!=null) {#
+          <strong>Drop off:</strong> #=kendo.format('{0:h:mm tt}',model.dropoffStartTime) # &nbsp;
+		  #}#
+		  #if(model.pickupStartTime!=null) {#
+		  <strong>Pick up:</strong> #=kendo.format('{0:h:mm tt}',model.pickupStartTime)#
+		   #}#
+		  <hr />
+		 <strong> #=model.lastName#,&nbsp;
+		  #=model.title#</strong><br />
+		  
+		  #if(model.coOwnerLastName!=null) {#
+		  #=model.coOwnerLastName#
+		  #}#
+		  ,&nbsp;
+		  #if(model.coOwnerFirstName!=null) {#
+		  #=model.coOwnerFirstName#
+		   #}#
+		  <br />
+		  <strong>#=model.petName#</strong><hr />
+          <strong>Appointment type: </strong>#=model.appointmentTypeName#<br />
+          <strong>Reason:</strong> #=model.reason#<br />
+		  <strong>Booked at:</strong> #=kendo.format('{0:h:mm tt (MM/d/yyyy)}',model.bookedDate)# by #=model.bookedBy# <br />
+		  #if(model.lastModifiedDate!=null) {#
+		  <strong>Modified at:</strong> #=kendo.format('{0:h:mm tt (MM/d/yyyy)}',model.lastModifiedDate)# by #=model.lastModifiedBy# 
+		   #}#
+		  <br />
+      #} else {#
+          <strong>No event data is available</strong>
+      #}#
+  </script>
+
+    <!-- POPUP---->
+    <script id="customEditorTemplate" type="text/x-kendo-template">
+        <div class="k-edit-label"><label for="title">Name</label></div>
+        <div data-container-for="title" class="k-edit-field">
+            <input type="text" class="k-input k-textbox" name="title" required="required" data-bind="value:title">
+        </div>
+        <div class="k-edit-label"><label for="appointmentId">Appointment Id</label></div>
+        <div data-container-for="appointmentId" class="k-edit-field">
+            <input type="text" class="k-input k-textbox" name="appointmentId" required="required" data-bind="value:appointmentId">
+        </div>
+        <div class="k-edit-label">
+            <label for="start">Start Date</label>
+        </div>
+        <div data-container-for="start" class="k-edit-field">
+            <input type="text"
+                   data-role="datetimepicker"
+                   data-interval="15"
+                   data-type="date"
+                   data-bind="value:start,invisible:isAllDay"
+                   name="start" />
+            <input type="text" data-type="date" data-role="datepicker" data-bind="value:start,visible:isAllDay" name="start" />
+            <span data-bind="text: startTimezone"></span>
+            <span data-for="start" class="k-invalid-msg" style="display: none;"></span>
+        </div>
+        <div class="k-edit-label"><label for="end">End</label></div>
+        <div data-container-for="end" class="k-edit-field">
+            <input type="text" data-type="date" data-role="datetimepicker" data-bind="value:end,invisible:isAllDay" name="end" data-datecompare-msg="End date should be greater than or equal to the start date" />
+            <input type="text" data-type="date" data-role="datepicker" data-bind="value:end,visible:isAllDay" name="end" data-datecompare-msg="End date should be greater than or equal to the start date" />
+            <span data-bind="text: endTimezone"></span>
+            <span data-bind="text: startTimezone, invisible: endTimezone"></span>
+            <span data-for="end" class="k-invalid-msg" style="display: none;"></span>
+        </div>
+        
+        <div class="k-edit-label"><label for="description">Shedule Description</label></div>
+        <div data-container-for="description" class="k-edit-field">
+            <textarea name="description" class="k-textbox" data-bind="value:description"></textarea>
+        </div>
+    </script>
+	
+    <style scoped>
+        .k-nav-current > .k-link span + span {
+            <!-- max-width: 200px; -->
+            display: inline-block;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            vertical-align: top;
+        }
+
+        #team-schedule {
+            background: url('../content/web/scheduler/team-schedule.png') transparent no-repeat;
+            height: 115px;
+            position: relative;
+        }
+
+        #people {
+            background: url('../content/web/scheduler/scheduler-people.png') no-repeat;
+            width: 345px;
+            height: 115px;
+            position: absolute;
+            right: 0;
+        }
+
+        #alex {
+            position: absolute;
+            left: 4px;
+            top: 81px;
+        }
+
+        #bob {
+            position: absolute;
+            left: 119px;
+            top: 81px;
+        }
+
+        #charlie {
+            position: absolute;
+            left: 234px;
+            top: 81px;
+        }
+    </style>
+<style>
+    .k-nav-today, .k-nav-prev, .k-nav-next { 
+      display: none !important; 
+      height: 30px !important;
+    }
+   ul.k-reset.k-scheduler-navigation
+{
+   display:none
+}
+
+
+  </style>
+
+
+    <div id="custom_notifications" class="custom-notifications dsp_none">
+        <ul class="list-unstyled notifications clearfix" data-tabbed_notifications="notif-group"></ul>
+        <div class="clearfix"></div>
+        <div id="notif-group" class="tabbed_notifications"></div>
+    </div>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/custom.js"></script>
+    <!-- pace -->
+    <link rel="stylesheet" href="http://kendo.cdn.telerik.com/2016.2.714/styles/kendo.common.min.css" />
+    <link rel="stylesheet" href="http://kendo.cdn.telerik.com/2016.2.714/styles/kendo.default.min.css" />
+    <link rel="stylesheet" href="http://kendo.cdn.telerik.com/2016.2.714/styles/kendo.default.mobile.min.css" />
+
+
+</body>
+
+</html>
